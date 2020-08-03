@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import FormHook from './components/FormHook';
+// import EjemploUno from './components/EjemploUno';
+// import Lista from './components/Lista';
+import Saludo from './components/Saludo';
+import Comentario from './components/Comentario';
 
 function App() {
+  const sujeto = {
+    nombre: 'Pedrito',
+    urlImagen: 'https://via.placeholder.com/150',
+    texto:'Lorem impsum dolor sit amet consectetur adisiping elit.'
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Saludo person="Pepe" edad="25" />
+      <Saludo person="Pedro"/>
+      <Comentario sujeto={sujeto}  />
     </div>
   );
 }
